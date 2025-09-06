@@ -5,8 +5,23 @@ garis = '=' * 25
 garis2 = '-' * 25
 
 # Membuat perulangan (while) untuk menangani error
-
 def konversi_suhu(nilai, dari, ke):
+    if dari == "C" and ke == "K":
+            hasil = nilai + 273.15
+            return hasil
+    elif dari == "C" and ke == "F":
+        return (nilai * 9/5) + 32
+    elif dari == "F" and ke == "C":
+        return (nilai - 32) * 5/9
+    elif dari == "F" and ke == "K":
+        hasil = (nilai - 32) * 5/9 + 273.15
+        return hasil
+    elif dari == "K" and ke == "C":
+        return nilai - 273.15
+    elif dari == "K" and ke == "F":
+        return (nilai - 273.15) * 9/5 + 32
+    
+def start_logic(nilai, dari, ke):
     while True:
     # Membuat logic try dan except untuk menangani error nilai non-integer untuk variabel nilai
         try:
@@ -43,21 +58,6 @@ def konversi_suhu(nilai, dari, ke):
             print("ERROR: Suhu tujuan input anda salah")
             print(garis2)
             continue # Mengulangi perulangan dari atas
-        
-        if dari == "C" and ke == "K":
-            hasil = nilai + 273.15
-            return hasil
-        elif dari == "C" and ke == "F":
-            return (nilai * 9/5) + 32
-        elif dari == "F" and ke == "C":
-            return (nilai - 32) * 5/9
-        elif dari == "F" and ke == "K":
-            hasil = (nilai - 32) * 5/9 + 273.15
-            return hasil
-        elif dari == "K" and ke == "C":
-            return nilai - 273.15
-        elif dari == "K" and ke == "F":
-            return (nilai - 273.15) * 9/5 + 32
         
         '''Menginisialisasi return dari fungsi 'konverensi_suhu' ke dalam variabel 'hasil' dengan hasil input dari pengguna'''
         hasil = utils.konversi_suhu(nilai, dari, ke)
