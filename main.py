@@ -10,3 +10,4 @@ nilai_input = float(input("Masukkan nilai suhu yang akan anda konversi (misal 10
 dari_input = input("Masukkan asal suhu anda (C/K/F): ").upper()
 ke_input = input("Masukkan tujuan suhu ands (C/K/F): ").upper()
 
+utils.start_logic(nilai_input, dari_input, ke_input)
