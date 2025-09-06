@@ -18,7 +18,7 @@ def konversi_suhu(nilai, dari, ke):
             continue
     
         ''' Menginisialisasi variabel 'dari' dengan input dari pengguna '''
-        dari = input("Masukkan asal suhu anda (C/K/F): ").upper()
+        dari = main.dari_input
     
         # Mengecek kondisi nilai tidak boleh negatif jika berasal dari suhu Kelvin
         if dari == "K" and nilai < 0:
@@ -35,7 +35,7 @@ def konversi_suhu(nilai, dari, ke):
             continue # Mengulangi perulangan dari atas
     
         '''Menginialisasi variabel "ke" dengan input dari pengguna'''
-        ke = input("Masukkan tujuan suhu ands (C/K/F): ").upper()
+        ke = main.ke_input
     
         # Mengecek kondisi nilai 'ke' harus berisi C, K, F
         if ke not in ["C", "K", "F"]:
