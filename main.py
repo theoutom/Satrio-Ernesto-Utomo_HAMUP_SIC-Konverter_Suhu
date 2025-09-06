@@ -1,7 +1,8 @@
 # Mengimpor module utils.py
 import utils
 
+nilai_input = float(input("Masukkan nilai suhu yang akan anda konversi (misal 100): "))
 # Mencetak ucapan selamat datang
-print(garis)
+print(utils.garis)
 print("Selamat datang di konversi suhu!")
-print(garis)
+print(utils.garis)
