@@ -1,15 +1,16 @@
+import main
+
 # Mendeklarasikan garis untuk memisahkan proses yang sedang berjalan
 garis = '=' * 25
 garis2 = '-' * 25
 
 # Membuat perulangan (while) untuk menangani error
 
-
 def konversi_suhu(nilai, dari, ke):
     while True:
     # Membuat logic try dan except untuk menangani error nilai non-integer untuk variabel nilai
         try:
-            nilai = float(input("Masukkan nilai suhu yang akan anda konversi (misal 100): "))
+            nilai = main.nilai_input
         except ValueError:
             # Mencetak teks 'ERROR: Masukkan angka yang valid' ketika nilai bukan merupakan angka
             print("ERROR: Masukkan angka yang valid")
