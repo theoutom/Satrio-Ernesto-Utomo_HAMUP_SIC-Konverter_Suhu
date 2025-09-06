@@ -7,8 +7,8 @@ garis2 = '-' * 25
 # Membuat perulangan (while) untuk menangani error
 def konversi_suhu(nilai, dari, ke):
     if dari == "C" and ke == "K":
-            hasil = nilai + 273.15
-            return hasil
+        hasil = nilai + 273.15
+        return hasil
     elif dari == "C" and ke == "F":
         return (nilai * 9/5) + 32
     elif dari == "F" and ke == "C":
@@ -21,11 +21,11 @@ def konversi_suhu(nilai, dari, ke):
     elif dari == "K" and ke == "F":
         return (nilai - 273.15) * 9/5 + 32
     
-def start_logic(nilai, dari, ke):
+def start_logic(nilai_proses, dari_proses, ke_proses):
     while True:
     # Membuat logic try dan except untuk menangani error nilai non-integer untuk variabel nilai
         try:
-            nilai = main.nilai_input
+            nilai = nilai_proses
         except ValueError:
             # Mencetak teks 'ERROR: Masukkan angka yang valid' ketika nilai bukan merupakan angka
             print("ERROR: Masukkan angka yang valid")
@@ -33,7 +33,7 @@ def start_logic(nilai, dari, ke):
             continue
     
         ''' Menginisialisasi variabel 'dari' dengan input dari pengguna '''
-        dari = main.dari_input
+        dari = dari_proses
     
         # Mengecek kondisi nilai tidak boleh negatif jika berasal dari suhu Kelvin
         if dari == "K" and nilai < 0:
@@ -50,7 +50,7 @@ def start_logic(nilai, dari, ke):
             continue # Mengulangi perulangan dari atas
     
         '''Menginialisasi variabel "ke" dengan input dari pengguna'''
-        ke = main.ke_input
+        ke = ke_proses
     
         # Mengecek kondisi nilai 'ke' harus berisi C, K, F
         if ke not in ["C", "K", "F"]:
@@ -60,7 +60,7 @@ def start_logic(nilai, dari, ke):
             continue # Mengulangi perulangan dari atas
         
         '''Menginisialisasi return dari fungsi 'konverensi_suhu' ke dalam variabel 'hasil' dengan hasil input dari pengguna'''
-        hasil = utils.konversi_suhu(nilai, dari, ke)
+        hasil = konversi_suhu(nilai, dari, ke)
         print(hasil) # mencetak variabel hasil
     
         '''Menginisialisasi variabel 'confirm' dalam menawarkan pengguna untuk melakukan konversi suhu lagi''' 
