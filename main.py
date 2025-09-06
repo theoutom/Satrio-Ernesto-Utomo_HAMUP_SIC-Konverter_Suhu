@@ -1,10 +1,13 @@
 # Mengimpor module utils.py
 import utils
 
+# Mendeklarasikan garis untuk memisahkan proses yang sedang berjalan
+garis = '=' * 25
+
 # Mencetak ucapan selamat datang
-print(utils.garis)
+print(garis)
 print("Selamat datang di konversi suhu!")
-print(utils.garis)
+print(garis)
 
 nilai_input = float(input("Masukkan nilai suhu yang akan anda konversi (misal 100): "))
 dari_input = input("Masukkan asal suhu anda (C/K/F): ").upper()
