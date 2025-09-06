@@ -89,6 +89,12 @@ def start_logic(nilai_proses, dari_proses, ke_proses):
 
         '''Menginisialisasi return dari fungsi 'konverensi_suhu' ke dalam variabel 'hasil' dengan hasil input dari pengguna'''
         hasil = konversi_suhu(nilai, dari, ke)
+        
+        # Mengecek kondisi hasil tidak boleh negatif jika menuju ke suhu Kelvin
+        if ke == "K" and hasil < 0:
+            # Mengubah hasil menjadi 0
+            hasil = 0
+        
         print(hasil) # mencetak variabel hasil
 
         '''Menginisialisasi variabel 'confirm' dalam menawarkan pengguna untuk melakukan konversi suhu lagi''' 
