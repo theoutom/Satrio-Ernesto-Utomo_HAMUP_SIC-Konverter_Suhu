@@ -1,10 +1,8 @@
-import main
-
 # Mendeklarasikan garis untuk memisahkan proses yang sedang berjalan
 garis = '=' * 25
 garis2 = '-' * 25
 
-# Membuat perulangan (while) untuk menangani error
+# Membuat perulangan (while) untuk menangani konversi suhu
 def konversi_suhu(nilai, dari, ke):
     if dari == "C" and ke == "K":
         hasil = nilai + 273.15
